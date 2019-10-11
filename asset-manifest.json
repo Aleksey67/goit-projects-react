@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/goit-projects-react/static/css/main.549d055a.chunk.css",
+    "main.js": "/goit-projects-react/static/js/main.d32075cc.chunk.js",
+    "main.js.map": "/goit-projects-react/static/js/main.d32075cc.chunk.js.map",
+    "runtime-main.js": "/goit-projects-react/static/js/runtime-main.a81425e3.js",
+    "runtime-main.js.map": "/goit-projects-react/static/js/runtime-main.a81425e3.js.map",
+    "static/js/2.86074ea9.chunk.js": "/goit-projects-react/static/js/2.86074ea9.chunk.js",
+    "static/js/2.86074ea9.chunk.js.map": "/goit-projects-react/static/js/2.86074ea9.chunk.js.map",
+    "index.html": "/goit-projects-react/index.html",
+    "precache-manifest.33a3a7040a6b8102159378c5d047cdc2.js": "/goit-projects-react/precache-manifest.33a3a7040a6b8102159378c5d047cdc2.js",
+    "service-worker.js": "/goit-projects-react/service-worker.js",
+    "static/css/main.549d055a.chunk.css.map": "/goit-projects-react/static/css/main.549d055a.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a81425e3.js",
+    "static/js/2.86074ea9.chunk.js",
+    "static/css/main.549d055a.chunk.css",
+    "static/js/main.d32075cc.chunk.js"
+  ]
+}
