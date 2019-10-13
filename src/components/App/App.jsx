@@ -1,7 +1,9 @@
 import React from 'react';
 import Profile from '../Profile/Profile';
 import Stats from '../Stats/Stats';
+import FriendList from '../FriendList/FriendList';
 import user from '../../data/user.json';
+import friends from '../../data/friends.json';
 import './App.css';
 
 const stats = [
@@ -17,6 +19,7 @@ const App = () => {
     <div className="app">
       <Profile user={user} />
       <Stats title="Upload stats" stats={stats} />
+      <FriendList friends={friends} />
     </div>
   );
 }

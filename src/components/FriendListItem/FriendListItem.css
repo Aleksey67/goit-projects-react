@@ -1,0 +1,25 @@
+.friend-list .item {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 5px 0 10px;
+  box-shadow: 0 0 10px #000;
+  background: #fff;
+}
+.friend-list .item * {
+  display: inline-block;
+}
+.friend-list .item img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.friend-list .item .status {
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: red;
+}
+.friend-list .item .status.status-online {
+  background: green;
+}
