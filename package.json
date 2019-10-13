@@ -2,6 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aleksey67.github.io/goit-projects-react/",
   "dependencies": {
     "eslint-plugin-prettier": "^3.1.1",
     "prop-types": "^15.7.2",
