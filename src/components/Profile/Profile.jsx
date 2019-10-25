@@ -1,43 +1,51 @@
 import React from 'react';
-import './Profile.css';
 import PropTypes from 'prop-types';
+import styles from './Profile.module.css';
 
-export default class Profile extends React.Component {
-  numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-
-  render() {
-    return (
-      <div className="profile">
-        <div className="description">
-          <img src={this.props.user.avatar} alt="user avatar" className="avatar" />
-          <p className="name">{this.props.user.name}</p>
-          <p className="tag">@{this.props.user.tag}</p>
-          <p className="location">{this.props.user.location}</p>
-        </div>
-
-        <ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="quantity">
-              {this.numberWithCommas(this.props.user.stats.followers)}
-            </span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="quantity">{this.numberWithCommas(this.props.user.stats.views)}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{this.numberWithCommas(this.props.user.stats.likes)}</span>
-          </li>
-        </ul>
-      </div>
-    );
-  }
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-Profile.propTypes = {
-  user: PropTypes.object,
+const Profile = ({ name, tag, location, avatar, stats }) => {
+  return (
+    <div className={styles.profile}>
+      <div className={styles.description}>
+        <img src={avatar} alt="user avatar" className="avatar" />
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
+
+      <ul className={styles.stats}>
+        <li>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>
+            {numberWithCommas(stats.followers)}
+          </span>
+        </li>
+        <li>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>
+            {numberWithCommas(stats.views)}
+          </span>
+        </li>
+        <li>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>
+            {numberWithCommas(stats.likes)}
+          </span>
+        </li>
+      </ul>
+    </div>
+  );
 };
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+};
+
+export default Profile;
